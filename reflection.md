@@ -1,5 +1,21 @@
 # PawPal+ Project Reflection
 
+Notes:
+1. Track pet care tasks
+    - add a pet to track
+    - select pet to track
+    - assign tasks needed for each pet
+    - mark completion of tasks (tap/click checkmark)
+    - set priority of each task
+    - set date and time of each task
+        -toggle reminders/alerts for each task
+
+2. Ask AI for help on clarifying/giving more info on possible task constraints
+3. Produce a daily plan and explain why
+    - assign task weights
+    - track behavior over time
+    - considers constraints
+
 ## 1. System Design
 
 **a. Initial design**
