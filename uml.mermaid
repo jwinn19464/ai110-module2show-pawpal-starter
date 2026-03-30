@@ -1,0 +1,51 @@
+classDiagram
+    class User {
+        -name: String
+        -phone: String
+        -email: String
+        -pets: list<Pet>
+        +addPet(pet: Pet): void
+        +deletePet(petID: int): void
+    }
+
+    class Pet {
+        -petID: int
+        -name: String
+        -species: String
+        -breed: String
+        -age: float
+        -weight: float
+        -photo: Image
+        -baseRequirements: list<Task>
+        +getProfile(): String
+        +updateWeight(newWeight: float): void
+    }
+
+    class Task {
+        -taskID: int
+        -name: String
+        -description: String
+        -estimatedTime: int
+        -dueDateTime: DateTime
+        -priority: int
+        -isCompleted: boolean
+        -isReminderActive: boolean
+        +toggleComplete(): void
+        +updatePriority(newPriority: int): void
+    }
+
+    class DailyPlanner {
+        -currentDate: Date
+        -activeTasks: list<Task>
+        -constraints: String
+        +addTask(task: Task): void
+        +modifyTask(taskID: int): void
+        +deleteTask(taskID: int): void
+        +generateDailyPlan(): String
+        +trackBehavior(petID: int): void
+    }
+
+    User "1" --> "*" Pet : Owns
+    Pet "1" --> "*" Task : Holds
+    DailyPlanner "1" o-- "*" Task : Manages
+    DailyPlanner "1" -- "1" User : Assists
