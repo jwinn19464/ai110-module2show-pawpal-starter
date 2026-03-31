@@ -42,6 +42,14 @@ pip install -r requirements.txt
 6. Connect your logic to the Streamlit UI in `app.py`.
 7. Refine UML so it matches what you actually built.
 
+# Core Features
+* Multi-Pet Management: Allows owners to add and track multiple pets with specific attributes like species, age, and weight.
+* Smart Task Tracking: Manages descriptions, durations, and priority levels (Low to High) for each pet care activity.
+* Automated Recurrence: Supports "daily" and "weekly" tasks by automatically generating the next instance upon completion.
+* Conflict Detection: Identifies and flags overlapping task windows where a duration extends into the next scheduled start time.
+* Urgency-Based Planning: Generates optimized daily agendas using a scoring algorithm based on deadline "slack," priority, and pet age.
+* Capacity Monitoring: Respects the owner's defined daily time budget and provides visual warnings for heavy workloads
+
 # Smarter Scheduling
 The updated PawPal+ system introduces more advanced logic to handle the complexities of households with multiple pets. Improved features include:
 
