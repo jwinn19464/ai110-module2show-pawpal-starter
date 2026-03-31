@@ -54,3 +54,25 @@ Conflict Detection: A new algorithm identifies overlapping windows by checking i
 Relative Recurrence: When a recurring task like "Heartworm Meds" is marked complete, the system automatically schedules the next occurrence relative to the completion time.
 
 Workload Monitoring: The system analyzes total daily minutes and provides visual warnings if the schedule becomes moderate or heavy.
+
+# Testing PawPal+
+To test this system, run this command:
+```bash
+python -m unittest test_pawpal.py
+```
+
+The test suite verifies several critical edge cases and system behaviors:
+
+Sorting Correctness: Confirms that tasks are returned in chronological order and that the system prefers higher priority items when generating plans.
+
+Recurrence Logic: Validates that completing a "daily" or "weekly" task correctly triggers the creation of the next occurrence at the proper interval.
+
+Conflict Detection: The scheduler must flag overlapping time windows where a task's duration extends into the time of the next scheduled item.
+
+Time Boundaries: Verifies that the daily plan correctly includes tasks for the day only and not those for other days.
+
+Capacity Limits: Checks that the system respects the owner's daily_time_available and skips tasks that exceed the remaining time budget.
+
+Reminder Activation: Tests that high-priority tasks (Priority >= 4) with small durationscorrectly trigger active reminders.
+
+Confidence Level of system's reliability: 4 of 5 Stars
