@@ -88,13 +88,17 @@ I evaluate the suggestions by reading project requirements, running test cases, 
 **a. What you tested**
 
 - What behaviors did you test?
+I tested task sorting, plan priority and time tradeoff for the scheduling logic, recurring task logic, and conflict detection.
+  
 - Why were these tests important?
+These tests were important as they verify that the system works logically and correctly in all possible cases.
 
 **b. Confidence**
 
-- How confident are you that your scheduler works correctly?
+- How confident are you that your scheduler works correctly? I am somewhat confident as I'm not sure what other edge cases I may have missed. However, the tests verify that the system works as intended.
+- 
 - What edge cases would you test next if you had more time?
-
+I would test tasks without a scheduled time, in that it can be done at any time. I would also test cases where there's tasks that overlap and have the same priority as each other.
 ---
 
 ## 5. Reflection
@@ -102,11 +106,14 @@ I evaluate the suggestions by reading project requirements, running test cases, 
 **a. What went well**
 
 - What part of this project are you most satisfied with?
+I am satisfied with all of the tests working along with the system being able to function and meet the requirements.
 
 **b. What you would improve**
 
 - If you had another iteration, what would you improve or redesign?
+I would probably adjust the scheduling logic to allow for more flexibility as the logic is still somewhat rigid.
 
 **c. Key takeaway**
 
 - What is one important thing you learned about designing systems or working with AI on this project?
+I learned that I must be very clear with the logic and that a good system design will help to keep the project under control as AI has clear definitions and constraints to work with.
