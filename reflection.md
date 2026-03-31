@@ -117,3 +117,6 @@ I would probably adjust the scheduling logic to allow for more flexibility as th
 
 - What is one important thing you learned about designing systems or working with AI on this project?
 I learned that I must be very clear with the logic and that a good system design will help to keep the project under control as AI has clear definitions and constraints to work with.
+
+<img width="739" height="1343" alt="image" src="https://github.com/user-attachments/assets/04480961-5625-4647-b94f-4f6ecfe5821b" />
+
