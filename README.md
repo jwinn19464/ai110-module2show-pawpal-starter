@@ -41,3 +41,16 @@ pip install -r requirements.txt
 5. Add tests to verify key behaviors.
 6. Connect your logic to the Streamlit UI in `app.py`.
 7. Refine UML so it matches what you actually built.
+
+# Smarter Scheduling
+The updated PawPal+ system introduces more advanced logic to handle the complexities of households with multiple pets. Improved features include:
+
+Smarter priority scoring: The scheduler calculates a priority score based on task weight, deadline "slack," and even the pet's age to ensure critical needs are met first.
+
+Intelligent Time-Blocking: It automatically assigns start and end times for tasks, incorporating a "cooldown" period after heavy activities to prevent owner burnout.
+
+Conflict Detection: A new algorithm identifies overlapping windows by checking if a task's duration extends into the start time of the next scheduled item.
+
+Relative Recurrence: When a recurring task like "Heartworm Meds" is marked complete, the system automatically schedules the next occurrence relative to the completion time.
+
+Workload Monitoring: The system analyzes total daily minutes and provides visual warnings if the schedule becomes moderate or heavy.

@@ -9,24 +9,38 @@ Notes:
     - set priority of each task
     - set date and time of each task
         -toggle reminders/alerts for each task
-
-2. Ask AI for help on clarifying/giving more info on possible task constraints
+    - add/modify/delete tasks
+2. Create and manage a profile
+    - Owner enters their own info (name, phone, email)
+    - Owner enters pet information (animal, breed/type, age (estimated if unknown), weight, photo (optional))
+    -Each pet has their own profile
+    -User can look at each pet profile upon selecting the pet's icon
 3. Produce a daily plan and explain why
     - assign task weights
     - track behavior over time
     - considers constraints
+
 
 ## 1. System Design
 
 **a. Initial design**
 
 - Briefly describe your initial UML design.
+
 - What classes did you include, and what responsibilities did you assign to each?
+
+Initially, I have the Owner, Pet, Task, and Planner classes. Users manage Pets and Tasks are assigned to each Pet. 
+The Owner class includes the owner information and availability.
+Pet includes information such as species, breed, age, weight, and any special care instructions.
+Each Task has attributes of Name, Estimated_Duration, When_To_Do, Priority, Category and Short Description (optional). 
+The Planner is in charge of producing a daily plan and explaining why it's the optimal plan. It should track the behavior/user inputs over time and consider it when planning and optimizing.
+It considers weights and constraints given and learned when planning and scheduling tasks. There should also be a function for users to manually add/delete tasks.
 
 **b. Design changes**
 
 - Did your design change during implementation?
 - If yes, describe at least one change and why you made it.
+I decided not to implement behavior tracking over time that was intended to optimize scheduling as that added unnecessary complexity to the project.
 
 ---
 
@@ -35,12 +49,17 @@ Notes:
 **a. Constraints and priorities**
 
 - What constraints does your scheduler consider (for example: time, priority, preferences)?
+The constraints considered are daily time available, priority, task duration and scheduled time.
+The scheduler 
 - How did you decide which constraints mattered most?
+Priority along with owner's available time mattered most as the most important tasks must be completed without exceeding the time that the owner has available for the day.
 
 **b. Tradeoffs**
 
 - Describe one tradeoff your scheduler makes.
+The system assumes that tasks must be done sequentially and does not account for tasks that can be done simultaneously.
 - Why is that tradeoff reasonable for this scenario?
+It is a reasonable tradeoff to avoid having the system become too unnecessarily complex.
 
 ---
 
@@ -49,12 +68,18 @@ Notes:
 **a. How you used AI**
 
 - How did you use AI tools during this project (for example: design brainstorming, debugging, refactoring)?
+I used AI to help me with brainstorming and refining ideas, debugging and refactoring, and to generate test cases.
+
 - What kinds of prompts or questions were most helpful?
+The most helpful questions were those that helped verify the algorithmic logic as well as simplify it.
 
 **b. Judgment and verification**
 
 - Describe one moment where you did not accept an AI suggestion as-is.
+I did not accept a suggestion as-is if I cannot understand it due to the unnecessary complexity that was being added.
+
 - How did you evaluate or verify what the AI suggested?
+I evaluate the suggestions by reading project requirements, running test cases, and seeing what makes sense and what doesn't.
 
 ---
 
